@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  address: 0.0.0.0        # aceita conexões do celular na mesma rede
+
+spring:
+  application:
+    name: urban-risk-backend
+  datasource:
+    url: jdbc:h2:file:./data/urbanrisk;AUTO_SERVER=TRUE
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  jackson:
+    default-property-inclusion: non_null
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+urbanrisk:
+  seed:
+    enabled: true          # carrega eventos de exemplo quando o banco está vazio
+  simulator:
+    enabled: true          # gera leituras de sensores simuladas em tempo real
+    interval-ms: 5000

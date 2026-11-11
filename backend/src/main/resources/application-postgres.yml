@@ -1,0 +1,16 @@
+# Perfil de produção: java -jar app.jar --spring.profiles.active=postgres
+# Defina DB_URL, DB_USER e DB_PASSWORD como variáveis de ambiente.
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/urbanrisk}
+    username: ${DB_USER:urbanrisk}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+urbanrisk:
+  seed:
+    enabled: false
+  simulator:
+    enabled: false
