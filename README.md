@@ -61,7 +61,7 @@ npx expo start
    ```
    curl -X POST http://localhost:8080/api/readings -H "Content-Type: application/json" -d "{\"sourceName\":\"Sensor S-099\",\"sourceGroup\":\"Sensores de nível\",\"type\":\"ALAGAMENTO\",\"neighborhood\":\"Ribeira\",\"value\":125}"
    ```
-3. Em **Relatar**, registre uma ocorrência (com consentimento) e mostre-a entrando como “Em validação” com confiança baixa. Em **Eventos**, com perfil “Agente” (Ajustes), valide, confirme e emita alerta.
+3. Em **Relatar**, registre uma ocorrência (com consentimento) e mostre-a entrando como “Em validação” com baixa confiança. Em **Eventos**, com perfil “Agente” (Ajustes), valide, confirme e emita alerta.
 4. **Pare o backend** (Ctrl+C no terminal). Em até ~5 s o app mostra “Sem conexão”, **sem travar** e mantendo os dados.
 5. **Suba o backend de novo.** O app exibe “Conexão restabelecida” e atualiza sozinho.
 
